@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travelon</title>
+    <link rel="stylesheet" href="Travelon.css">
+</head>
+<body>
+    <div class="main">
+        <section class="info">
+            <div id="infoTrav">
+                <table id="tInfoTrav" border="2"></table>
+            </div>
+            <div id="infoForm">
+                <label for="pname">Name</label>
+                <input id="pname"><br>
+                <label for="PersonalID">Personal ID</label>
+                <input id="PersonalID"><br>
+                <label for="TravleID">Travle ID</label>
+                <input id="TravleID"><br>
+                <label for="passengers">Passengers</label>
+                <input id="passengers"><br>
+                <button type="button" onclick="orderUpdate(pname.value, PersonalID.value, TravleID.value, passengers.value)">Submit</button>
+            </div>
+        </section>
+        <section class="orders">
+            <table id="listOrders" border="1"></table>
+        </section>
+        <section class="find">
+            <div id="findByDestination"></div>
+            <div id="findByName">
+                <div>
+                    <label for="findByName">Find by name</label><input id="findByName"><button type="button" onclick="findOrders(findByName.value)">Find</button>
+                </div>
+                <div>
+                    <table id="listOrdersByName" border="1"></table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="Travelon.js"></script>
+</body>
+</html>
